@@ -20,7 +20,7 @@ function CuboidMaker(length, width, height) {
 */
 
 CuboidMaker.prototype.volume = function() {
-  return `${this.length * this.width * this.height}`;
+  return `The volume of Cuboid is = ${this.length * this.width * this.height}`;
 };
 
 
@@ -31,7 +31,7 @@ CuboidMaker.prototype.volume = function() {
 */
 
 CuboidMaker.prototype.surfaceArea = function() {
-  return `${2 * (this.length * this.width + this.length * this.height + this.width * this.height)}`;
+  return `The surface area of Cuboid is = ${2 * (this.length * this.width + this.length * this.height + this.width * this.height)}`;
 }
 
 /* == Step 4: Create a new object that uses CuboidMaker ==

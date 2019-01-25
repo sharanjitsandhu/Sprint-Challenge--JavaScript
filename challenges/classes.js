@@ -20,7 +20,7 @@ class CuboidMakerNew {
   */
   
   volume() {
-    return `${this.length * this.width * this.height}`;
+    return `The volume of cuboid is: ${this.length * this.width * this.height}`;
   }
   
   
@@ -31,9 +31,25 @@ class CuboidMakerNew {
   */
   
   surfaceArea() {
-    return `${2 * (this.length * this.width + this.length * this.height + this.width * this.height)}`;
+    return `The surface area of cuboid is: ${2 * (this.length * this.width + this.length * this.height + this.width * this.height)}`;
   }
 }
+
+  class CubeMaker extends CuboidMakerNew {
+    constructor(edge) {
+      super(edge);
+      this.edge = edge;
+      
+    }
+    volumeCube() {
+      return `The volume of cube is: ${Math.pow(this.edge, 3)}`;
+    }
+    surfaceAreaCube() {
+      return `The surface area of cube is: ${6 * (Math.pow(this.edge, 2))}`;
+    }
+  
+  }
+
   
   /* == Step 4: Create a new object that uses CuboidMaker ==
     Create a cuboid object that uses the new keyword to use our CuboidMaker constructor
@@ -41,10 +57,16 @@ class CuboidMakerNew {
   */
 
   const cuboidNew = new CuboidMakerNew (4, 5, 5);
+  const cubeNew = new CubeMaker (3);
 
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(cuboidNew.volume()); // 100
 console.log(cuboidNew.surfaceArea()); // 130
 
+
 // Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area.
+
+
+console.log(cubeNew.volumeCube()); //27
+console.log(cubeNew.surfaceAreaCube()); //54
